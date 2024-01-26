@@ -13,7 +13,7 @@ html {
 
 a {
   text-decoration: none;
-  margin: 8px;
+  margin: 0.5em;
 }
 
 a:hover {
@@ -25,7 +25,6 @@ a:hover {
 
 .app {
   width: 100vw;
-
   z-index: 10;
 }
 
@@ -39,9 +38,21 @@ a:hover {
   z-index: -1;
 }
 
+.background .field img {
+  width: 100%;
+  z-index: -1;
+}
+
+.background .parachuteBox img {
+  position: relative;
+  z-index: -1;
+  width: 30%;
+  height: auto;
+}
+
 .banner {
   display: flex;
-  width: 1920px;
+  width: 100vw;
   padding: 6px 0px;
   justify-content: center;
   align-items: center;
@@ -53,7 +64,7 @@ a:hover {
 
 .banner-content {
   width: 100vw;
-  height: 52.77px;
+  height: 3em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,17 +75,16 @@ a:hover {
 .navigation {
   display: flex;
   flex-direction: row;
-  gap: 61px;
-  margin-right: 241px;
+  gap: 4em;
+  margin-right: 15em;
 }
 
 .header-link {
   color: #CCC;
   font-family: Inter;
-  font-size: 19px;
+  font-size: 0.990vw;
   font-style: normal;
   font-weight: 400;
-  line-height: 25.92px;
 }
 
 .link-home {
@@ -88,13 +98,14 @@ a:hover {
   right: 0px;
   top: 0px;
   z-index: 1;
+  width: 60%;
+  height: auto;
 }
 
 .field img {
   position: absolute;
   right: 0px;
-  top: 216.67px;
-
+  top: 22vh;
   z-index: 1;
 }
 
@@ -107,10 +118,12 @@ a:hover {
 }
 
 .parachuteBox {
-  position: relative;
-  z-index: 10001;
-  top: 316px;
-  left: 260px;
+  position: absolute;
+  top: 20vh;
+  left: 53vw;
+  z-index: 1;
+  width: 100%;
+  height: auto;
 }
 
 .about {
@@ -119,34 +132,41 @@ a:hover {
   width: fit-content !important;
 }
 
+.award-container {
+  height: 100vh;
+}
+
 .award-abs {
   position: relative;
-  left: -22px;
-  top: 152px;
-  height: 714px;
-  width: 2043px;
+  left: -7.5em;
+  top: 9.5em;
+  height: 44.625em;
+  width: 127.6875em;
 }
 
 .award-block {
   position: relative;
-  margin-left: 262px;
-  margin-top: 13px;
+  width: 40vw;
+
+  margin-left: 15em;
   margin-bottom: 283px;
   margin-right: 1046px;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: white;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .timer-border {
   top: -1px;
   display: flex;
-  width: 84px;
+  width: calc(5em + 2px);
   height: 30px;
   position: relative;
   border-radius: 5px;
   background: linear-gradient(90deg, #FF3873, #711EFF, #3FE5FF);
+  display: flex;
+
 }
 
 .timer {
@@ -156,31 +176,27 @@ a:hover {
   flex-wrap: wrap;
   position: relative;
   height: 28px;
-  width: 82px;
+  width: 100%;
   border-radius: 5px;
   margin: 1px;
   background: #030A13;
   -webkit-text-fill-color: white;
   color: #FFF;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 0.833vw;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
 
-.drift-label {
-  width: 600px;
-}
+
 
 .drift {
   width: 100%;
   position: relative;
   font-family: Inter;
-  font-size: 72px;
+  font-size: 3.750vw;
   font-style: normal;
   font-weight: 600;
-  line-height: 87px;
   margin-top: 13px;
 }
 
@@ -209,32 +225,25 @@ a:hover {
 
 .whitelist-label {
   font-family: Inter;
-  font-size: 72px;
+  font-size: 3.750vw;
   font-style: normal;
   font-weight: 600;
-  line-height: 87px;
 }
 
 .about-label {
-  margin-top: -12px;
   position: relative;
-  display: flex;
-  width: 660px;
   height: 138px;
-  flex-direction: column;
-  justify-content: center;
   font-family: Inter;
-  font-size: 20px !important;
+  font-size: 1.042vw !important;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 .get-award-button {
-  margin-top: 14px;
+  margin-top: 1em;
   border: 0px;
-  width: 604px;
-  height: 60px;
+  width: 40em;
+  height: 4em;
   flex-shrink: 0;
   border-radius: 10px;
   background: linear-gradient(175deg, #F6F063 0%, transparent 60%), linear-gradient(90deg, #FF3866 0%, #711EFF 47.3958%, #3FE5FF 100%);
@@ -268,16 +277,16 @@ a:hover {
   -webkit-text-fill-color: #06030B;
   text-align: center;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 1.042vw;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
 
 
 .participate-container {
+
   margin-top: 138px;
-  height: 364px;
+  height: 80vh;
   width: 100vw;
   position: relative;
   color: #fff;
@@ -285,20 +294,20 @@ a:hover {
   color: #FFF;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   text-align: center;
   font-family: Inter;
-  font-size: 47.813px;
+  font-size: 2.490vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 60px;
   /* 125.49% */
 }
 
 .participate-label {
-  width: 784px;
+  width: 100vw;
   height: fit-content;
 }
 
@@ -311,23 +320,32 @@ a:hover {
 }
 
 .participate {
+  white-space: normal;
   display: flex;
   flex-direction: row;
-  gap: 367px;
-  height: a;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
 }
 
 .participate-left {
-  width: 544px;
-  height: 402.58px;
   position: relative;
-  gap: 39px;
   top: 18px;
-  left: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 40%;
+}
+
+.participate-right {
+  position: relative;
+  top: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
 }
 
 .participate-outer-cell {
@@ -362,6 +380,9 @@ a:hover {
   border-radius: 95px;
   background-color: #040A14;
   transition: 0.3s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .participate-inner-cell img {
@@ -393,22 +414,6 @@ a:hover {
   transition: 0.3s;
 }
 
-.first-cell {
-  position: absolute;
-  left: 78px
-}
-
-
-.second-cell {
-  position: absolute;
-  left: 242px
-}
-
-
-.third-cell {
-  position: absolute;
-  left: 406px
-}
 
 .participate-header {
   background: linear-gradient(90deg, #E8A2A0 0%, #9468F1 50%, #71CCE9 100%);
@@ -417,10 +422,9 @@ a:hover {
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-family: Inter;
-  font-size: 30px;
+  font-size: 1.563vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 46.11px;
   top: 45px;
   position: relative;
   display: flex;
@@ -429,38 +433,25 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1em
 }
 
 .participate-text {
-  display: flex;
   width: 537px;
   height: 135px;
-  flex-direction: column;
-  justify-content: center;
   flex-shrink: 0;
   color: #FFF;
-  gap: 0;
   text-align: center;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 1.042vw;
   font-style: normal;
   font-weight: 400;
-  line-height: 38.4px;
-  /* 192% */
   opacity: 0.7;
 }
 
-.participate-right {
-  width: 544px;
-  height: 402.58px;
-  position: relative;
-  top: 18px;
-  left: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .participate-right .participate-header {
   height: 110px;
@@ -480,16 +471,15 @@ a:hover {
 .instruction-header {
   display: flex !important;
   gap: 8px;
-  width: 784px;
+  width: 100vw;
   height: 163px;
   flex-direction: row;
   justify-content: center;
   flex-shrink: 0;
   font-family: Inter;
-  font-size: 47.813px;
+  font-size: 2.490vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 60px;
   color: #fff;
   align-items: center;
 }
@@ -508,11 +498,11 @@ a:hover {
   color: #FFF;
 
   font-family: Inter;
-  font-size: 24px;
+  font-size: 1.250vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 46.11px;
-  /* 192.125% */
+  justify-content: center;
+  width: 100vw;
 }
 
 .instructions-item {
@@ -521,6 +511,8 @@ a:hover {
   gap: 30px;
   transform: scale(1);
   transition: 0.3s;
+  width: 25%;
+  height: auto;
 }
 
 footer {
@@ -533,10 +525,9 @@ footer {
 
   text-align: center;
   font-family: Inter;
-  font-size: 18px;
+  font-size: 0.938vw;
   font-style: normal;
   font-weight: 600;
-  line-height: 27.3px;
   /* 151.667% */
   background: #000508;
   padding-top: 20px;
@@ -546,9 +537,19 @@ footer {
   transition: 0.3s;
   transform: scale(1.05);
   z-index: 2000;
+
 }
 
 .participate-right:hover img:hover {
   transition: 0.3s;
   transform: scale(1.4);
+}
+
+#cells {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 2em;
 }
