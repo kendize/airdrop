@@ -38,6 +38,16 @@ a:hover {
   z-index: -1;
 }
 
+@media only screen and (max-width: 1024px) {
+  .background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 30vw
+  }
+}
+
+
 .background .field img {
   width: 100%;
   z-index: -1;
@@ -53,7 +63,6 @@ a:hover {
 .banner {
   display: flex;
   width: 100vw;
-  padding: 6px 0px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -64,7 +73,7 @@ a:hover {
 
 .banner-content {
   width: 100vw;
-  height: 3em;
+  height: 4vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -76,7 +85,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   gap: 4em;
-  margin-right: 15em;
+  margin-right: 15vw;
 }
 
 .header-link {
@@ -85,12 +94,21 @@ a:hover {
   font-size: 0.990vw;
   font-style: normal;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .link-home {
   display: flex;
   align-items: center;
-  margin-left: 6em;
+  width: 60vw;
+  height: auto;
+  margin: 0 10vw;
+}
+
+.link-home img {
+  align-items: center;
+  height: auto;
+  width: 6vw;
 }
 
 .rainbow img {
@@ -128,29 +146,46 @@ a:hover {
 
 .about {
   position: relative;
-  height: fit-content !important;
-  width: fit-content !important;
-}
-
-.award-container {
   height: 100vh;
 }
 
-.award-abs {
+
+@media only screen and (max-width: 1480px) {
+
+
+  .about {
+    position: relative;
+    height: 60vw;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .award-container {
+    position: relative;
+    height: 40vw;
+    top: 10vw;
+    left: 10vw;
+  }
+
+  .about {
+    position: relative;
+    height: 100vw;
+  }
+}
+
+.award-container {
   position: relative;
-  left: -7.5em;
-  top: 9.5em;
-  height: 44.625em;
-  width: 127.6875em;
+  height: 40vw;
+  top: 10vw;
+  left: 10vw;
 }
 
 .award-block {
+  display: block;
   position: relative;
   width: 40vw;
 
-  margin-left: 15em;
-  margin-bottom: 283px;
-  margin-right: 1046px;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: white;
@@ -160,8 +195,8 @@ a:hover {
 .timer-border {
   top: -1px;
   display: flex;
-  width: calc(5em + 2px);
-  height: 30px;
+  width: calc(5vw + 2px);
+  height: calc(2vw + 2px);
   position: relative;
   border-radius: 5px;
   background: linear-gradient(90deg, #FF3873, #711EFF, #3FE5FF);
@@ -175,8 +210,8 @@ a:hover {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  height: 28px;
   width: 100%;
+  height: 2vw;
   border-radius: 5px;
   margin: 1px;
   background: #030A13;
@@ -232,18 +267,19 @@ a:hover {
 
 .about-label {
   position: relative;
-  height: 138px;
+  height: auto;
   font-family: Inter;
   font-size: 1.042vw !important;
   font-style: normal;
   font-weight: 500;
+  padding-bottom: 2vw;
 }
 
 .get-award-button {
   margin-top: 1em;
   border: 0px;
-  width: 40em;
-  height: 4em;
+  width: 30vw;
+  height: 5vw;
   flex-shrink: 0;
   border-radius: 10px;
   background: linear-gradient(175deg, #F6F063 0%, transparent 60%), linear-gradient(90deg, #FF3866 0%, #711EFF 47.3958%, #3FE5FF 100%);
@@ -285,8 +321,7 @@ a:hover {
 
 .participate-container {
 
-  margin-top: 138px;
-  height: 80vh;
+  margin-bottom: 3vw;
   width: 100vw;
   position: relative;
   color: #fff;
@@ -295,7 +330,6 @@ a:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   text-align: center;
@@ -328,6 +362,8 @@ a:hover {
   width: 90vw;
 }
 
+
+
 .participate-left {
   position: relative;
   top: 18px;
@@ -348,17 +384,18 @@ a:hover {
   width: 40%;
 }
 
+
 .participate-outer-cell {
   position: static;
   top: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 105px;
-  height: 105px;
+  width: 7vw;
+  height: 7vw;
   color: white;
   background-color: #0E192D;
-  border-radius: 105px;
+  border-radius: 7vw;
   transition: 0.3s;
 }
 
@@ -366,18 +403,18 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 137px;
-  height: 137px;
+  width: 8vw;
+  height: 8vw;
   transform: translate(-16px, -16px);
   background: linear-gradient(90deg, #FF3866 0%, #711EFF 50%, #3FE5FF 100%);
-  border-radius: 137px;
+  border-radius: 8vw;
   transition: 0.3s;
 }
 
 .participate-inner-cell {
-  width: 95px;
-  height: 95px;
-  border-radius: 95px;
+  width: calc(7vw - 2px);
+  height: calc(7vw - 2px);
+  border-radius: calc(13vw - 2px);
   background-color: #040A14;
   transition: 0.3s;
   display: flex;
@@ -385,35 +422,144 @@ a:hover {
   align-items: flex-start;
 }
 
-.participate-inner-cell img {
-  position: relative;
-  top: 13.9px;
-  left: 27.4px;
-  background-color: #040A14;
-  transition: 0.3s;
-  clip-path: inset(8px 10px 0 0);
-  border-radius: 35%;
-}
-
 .participate-outer-cell:hover .participate-inner-cell img {
   position: relative;
-  top: 18.72px;
-  left: 36.23px;
-  width: 65.925px;
-  height: 77.256px;
+  top: 1.4vw;
+  left: 1.8vw;
+  width: 4vw;
+  height: 4vw;
+  transition: 0.3s;
+  clip-path: inset(8px 10px 0 0);
+  border-radius: 4vw;
+}
+
+.participate-inner-cell img {
+  position: relative;
+  top: 1.8vw;
+  left: 2.2vw;
+  width: 3vw;
+  height: 3vw;
+  background-color: #040A14;
   transition: 0.3s;
   clip-path: inset(8px 10px 0 0);
   border-radius: 35%;
 }
 
-.participate-outer-cell:hover .participate-inner-cell {
-  width: 125px;
-  height: 125px;
-  border-radius: 125px;
-  background-color: #040A14;
-  transition: 0.3s;
-}
+@media only screen and (max-width: 1024px) {
+  .participate {
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
 
+  .participate-left {
+    position: relative;
+    top: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .participate-left img {
+    width: 8vw;
+    height: auto;
+
+  }
+
+  .participate-right {
+    position: relative;
+    top: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .participate-header {
+    background: linear-gradient(90deg, #E8A2A0 0%, #9468F1 50%, #71CCE9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.563vw;
+    font-style: normal;
+    font-weight: 700;
+    top: 45px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1em
+  }
+
+  .participate-outer-cell {
+    position: static;
+    top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vw;
+    color: white;
+    background-color: #0E192D;
+    border-radius: 12vw;
+    transition: 0.3s;
+  }
+
+  .participate-outer-cell:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13vw;
+    height: 13vw;
+    transform: translate(-16px, -16px);
+    background: linear-gradient(90deg, #FF3866 0%, #711EFF 50%, #3FE5FF 100%);
+    border-radius: 13vw;
+    transition: 0.3s;
+  }
+
+  .participate-inner-cell {
+    width: calc(12vw - 2px);
+    height: calc(12vw - 2px);
+    border-radius: calc(12vw - 2px);
+    background-color: #040A14;
+    transition: 0.3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .participate-outer-cell:hover .participate-inner-cell img {
+    position: relative;
+    top: 2vw;
+    left: 3.1vw;
+    width: 6vw;
+    height: 6vw;
+    transition: 0.3s;
+    clip-path: inset(8px 10px 0 0);
+    border-radius: 4vw;
+  }
+
+  .participate-inner-cell img {
+    position: relative;
+    top: 3vw;
+    left: 3.7vw;
+    width: 5vw;
+    height: 5vw;
+    background-color: #040A14;
+    transition: 0.3s;
+    clip-path: inset(8px 10px 0 0);
+    border-radius: 35%;
+  }
+}
 
 .participate-header {
   background: linear-gradient(90deg, #E8A2A0 0%, #9468F1 50%, #71CCE9 100%);
@@ -439,8 +585,6 @@ a:hover {
 }
 
 .participate-text {
-  width: 537px;
-  height: 135px;
   flex-shrink: 0;
   color: #FFF;
   text-align: center;
@@ -454,7 +598,6 @@ a:hover {
 
 
 .participate-right .participate-header {
-  height: 110px;
   top: 0
 }
 
